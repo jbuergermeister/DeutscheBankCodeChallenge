@@ -36,7 +36,7 @@ public class TradeController {
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
 	}
 	
-	@GetMapping("/date/{date}/{ticker}")
+	@GetMapping("/date/{date}/ticker/{ticker}")
 	public ResponseEntity<List<Trade>> getDailyTickerTrades(@PathVariable LocalDate date, @PathVariable String ticker) {
 		List<Trade> dailyTrades = tradeService.getDailyTickerTrades(date, ticker);
 		

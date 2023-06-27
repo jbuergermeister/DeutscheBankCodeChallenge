@@ -32,12 +32,12 @@ public class StatisticController {
 		return statisticService.getAllStatistics();
 	}
 
-	@GetMapping("/{date}/index")
+	@GetMapping("/date/{date}/index")
 	public Statistic getIndexByDate(@PathVariable LocalDate date) {
 		return statisticService.getIndexStatisticByDate(date);
 	}
 	
-	@GetMapping("/{date}/ticker/{ticker}")
+	@GetMapping("/date/{date}/ticker/{ticker}")
 	public Statistic getStatisticByDateAndTicker(@PathVariable LocalDate date, @PathVariable String ticker) {
 		return statisticService.getStatisticByDateAndTicker(date, ticker);
 	}
